@@ -170,7 +170,7 @@ public class TagServiceImpl implements TagService {
 			return "";
 		}else {
 			String[] tagNames= articleTagIds.replaceAll("，", ",").split(",");
-			if (tagNames.length<=1) {
+			if (tagNames.length<=0) {
 				return tagNames[0];
 			}else {
 				Tag tag = null;

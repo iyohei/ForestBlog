@@ -125,15 +125,11 @@
 <rapid:override name="footer-script">
 
     <script>
-
-
         layui.use(['form', 'layedit', 'laydate'], function() {
             var form = layui.form
                 , layer = layui.layer
                 , layedit = layui.layedit
                 , laydate = layui.laydate;
-
-
             //上传图片,必须放在 创建一个编辑器前面
             layedit.set({
                 uploadImage: {
@@ -141,19 +137,14 @@
                     ,type: 'post' //默认post
                 }
             });
-
-
-
             //创建一个编辑器
             var editIndex = layedit.build('content',{
                     height:350,
                 }
             );
-
 //            layui.code({
 //                elem: 'pre', //默认值为.layui-code
 //            });
-
             //自定义验证规则
             form.verify({
                 title: function (value) {
@@ -171,9 +162,7 @@
                     ,'italic' //斜体
                     ,'underline' //下划线
                     ,'del' //删除线
-
                     ,'|' //分割线
-
                     ,'left' //左对齐
                     ,'center' //居中对齐
                     ,'right' //右对齐
@@ -184,9 +173,6 @@
                     ,'code'
                 ]
             });
-
-
-
             //二级联动
             form.on("select(articleParentCategoryId)",function () {
                 var optionstring = "";
@@ -199,7 +185,6 @@
                 $("#articleChildCategoryId").html("  <option value=''selected>二级分类</option>"+optionstring);
                 form.render('select'); //这个很重要
             })
-
         });
         //end
 		//       上传封面
@@ -230,11 +215,7 @@
                     });
                 }
             });
-
         });  
-
-
-
     </script>
 
 </rapid:override>
@@ -242,4 +223,3 @@
 
 <%--此句必须放在最后--%>
 <%@ include file="../Public/framework.jsp"%>
-

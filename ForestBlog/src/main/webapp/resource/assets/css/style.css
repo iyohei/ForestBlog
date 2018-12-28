@@ -46,7 +46,27 @@ article, aside, details, figcaption, figure, footer, header, main, nav,
 	section {
 	display: block;
 }
-
+h1{
+	font-size:26px;
+	line-height: 190%;
+	margin: 10px -21px;
+	padding: 0 25px;
+/* 	border-left: 8px solid #e40000; */
+/* 	margin: .67em 0; */
+	border-left: 5px solid #e40000;
+}
+h3{
+	font-size:22px;
+}
+h4{
+	font-size:20px;
+}
+h5{
+	font-size:18px;
+}
+h6{
+	font-size:16px;
+}
 pre {
 	border: 1px solid #d1d1d1;
 	line-height: 190%;
@@ -1737,8 +1757,8 @@ to {
 	font-size: 1.7rem;
 	line-height: 190%;
 	margin: 10px -21px;
-	padding: 0 44px;
-	border-left: 5px solid #e40000;
+	padding: 0 25px;
+/* 	border-left: 5px solid #e40000; */
 }
 
 .single-content h3 {
@@ -1824,12 +1844,16 @@ to {
 }
 
 blockquote {
-	width: 100%;
+	/* width: 100%;
 	color: #8b8b8b;
 	margin: 0 auto;
 	padding: 10px;
 	clear: both;
-	border: 1px dashed #ddd;
+	border: 1px dashed #ddd; */
+	margin: 0;
+	padding: 0 15px;
+	color: #666;
+	border-left: 4px solid #ddd;
 }
 
 .single-content img, .comment-list p img {

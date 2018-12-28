@@ -51,7 +51,9 @@
     <mvc:resources mapping="/img/**" location="/resource/assets/img/"></mvc:resources>
     <!--<mvc:resources mapping="/uploads/**" location="/resource/uploads/"></mvc:resources>-->
     <mvc:resources mapping="/plugin/**" location="/resource/assets/plugin/"></mvc:resources>
-
+     <mvc:resources mapping="/editor/**" location="/resource/assets/editor/"></mvc:resources>
+     <mvc:resources mapping="/fonts/**" location="/resource/assets/editor/fonts/"></mvc:resources>
+	<mvc:resources mapping="/images/**" location="/resource/assets/editor/images/"></mvc:resources>
 
     <mvc:interceptors>
         <mvc:interceptor>

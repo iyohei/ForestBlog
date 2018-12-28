@@ -9,6 +9,9 @@ import com.hfanss.blog.service.UserService;
 
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.data.redis.support.collections.RedisMap;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -42,10 +45,9 @@ public class AdminController {
 
     @Autowired
     private LinkService linkService;
-
     @ModelAttribute
     public void init(Model model) throws Exception {
-
+    	
     }
 
     //后台首页
