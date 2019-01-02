@@ -84,6 +84,14 @@
                 <td>
                     <a href="/admin/link/edit/${l.linkId}" class="layui-btn layui-btn-mini">编辑</a>
                     <a href="/admin/link/delete/${l.linkId}" class="layui-btn layui-btn-danger layui-btn-mini" onclick="return confirmDelete()">删除</a>
+                	<c:choose>
+                        <c:when test="${l.linkStatus==1}">
+                          	   <a href="/admin/link/update2/${l.linkId}" class="layui-btn layui-btn-mini">隐藏</a>
+                        </c:when>
+                        <c:otherwise>
+                            <a href="/admin/link/update1/${l.linkId}" class="layui-btn layui-btn-mini"><span style="color:#FF5722;">显示</span></a>
+                        </c:otherwise>
+                    </c:choose>
                 </td>
                 <td>${l.linkId}</td>
             </tr>

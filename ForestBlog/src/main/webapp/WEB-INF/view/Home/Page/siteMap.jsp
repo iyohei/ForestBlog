@@ -14,7 +14,7 @@
 </rapid:override>
 
 <rapid:override name="title">
-    <title>站点地图</title>
+    <title>站点地图 | ${options.optionSiteTitle}</title>
 </rapid:override>
 
 <rapid:override name="header-style">

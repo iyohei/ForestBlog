@@ -1,6 +1,43 @@
 $(document)
 		.ready(
+				
 				function() {
+					/**给正文中的图片加 点击放大特效  JS   start*/
+					$('#post-002 img').each(function() {
+					    if ($(this).parent().hasClass('fancybox')) return;
+					    if ($(this).hasClass('nofancybox')) return;
+					    var alt = this.alt;
+					    $(this).wrap('<a href="javascript:void(0);" data-src="' + ($(this).attr('data-src') == null ? this.src : $(this).attr('data-src')) + '" title="' + alt + '" class="fancybox"></a>');
+					  });
+					$(".fancybox").click(function(){
+						var url = $(this).attr('data-src');
+						$("#showImg_img").attr("src",url);
+						$("#showImg").show();
+						
+					});
+					$("#showImg_img").click(function(){
+						$("#showImg").hide();
+						$("#showImg_img").attr("src","");
+					});
+					/**给正文中的图片加 点击放大特效  JS   end*/
+					
+					
+					//微信图片  显示 js
+					$("#weixin").mouseover(function() {
+						$(".weixin_img").show();
+	                });//微信图片  隐藏 js
+	                $("#weixin").mouseout(function() {
+						$(".weixin_img").hide();
+	                });//页面滑动到顶部 js
+	                $("#top_btn").click(function() {
+	                    $("html,body").animate({scrollTop:0}, 500);
+	                });//页面滑动到底部 js
+	                $("#bottom_btn").click(function() {
+	                    $("html,body").animate({scrollTop: window.outerHeight}, 500);
+	                });
+					
+					
+					
 					// 搜索
 					$(".nav-search").click(function() {
 						$("#search-main").fadeToggle(300);
@@ -71,30 +108,6 @@ function pr() {
 	}
 }
 
-// 微信二维码
-$("#weixin_btn").click(function() {
-	// 页面层-微信二维码
-	layer.open({
-		type : 1,
-		title : false,
-		closeBtn : 0,
-		area : '516px',
-		skin : 'layui-layer-nobg', // 没有背景色
-		shadeClose : true,
-		content : $('#weixin_code'),
-		end : function() {
-			$("#weixin_code").attr("style", "display:none;")
-		}
-	});
-});
-
-// 获取相对路径
-// function getPath(){
-// var pathName = document.location.pathname;
-// var index = pathName.substr(1).indexOf("/");
-// var result = pathName.substr(0,index+1);
-// return result;
-// }
 
 // 文字滚动
 (function($) {
@@ -292,24 +305,24 @@ $("#cancel-comment-reply-link").click(function() {
 
 var articleId = (window.location.pathname).match(/\d+/g);
 // 文章浏览量+1
+
 function increaseViewCount() {
 	if ($.cookie("viewId") != articleId || $.cookie("viewId") == null) {
 		$.ajax({
-			async : false,
-			type : "POST",
-			url : "/article/addView/" + articleId,
-			contentType : "application/x-www-form-urlencoded",
-			success : function(data) {
+			async: false,
+			type: "POST",
+			url: "/article/addView/" + articleId,
+			contentType: "application/x-www-form-urlencoded",
+			success: function(data) {
 				$(".articleViewCount").html(data);
-				$.cookie("viewId", articleId,// 需要cookie写入的业务
-				{
-					"path" : "/", // cookie的默认属性
+				$.cookie("viewId", articleId, {
+					"path": "/"
 				});
 			},
-			error : function() {
+			error: function() {
 				alert("获取数据出错!");
-			},
-		});
+			}
+		})
 	}
 }
 
@@ -325,13 +338,15 @@ function increaseLikeCount() {
 				$(".count").html(data);$("#fa-fa-thumbs-up").css('color', '#EE0000');
 				$.cookie("likeId", articleId,// 需要cookie写入的业务
 				{
-					"path" : "/", // cookie的默认属性
+					"path" : "/" // cookie的默认属性
 				});
 			},
 			error : function() {
 				// alert("获取数据出错!");
-			},
-		});
+			}
+		})
+	}else{
+		layer.msg('你已经点过赞了哦');
 	}
 }
 
@@ -403,10 +418,10 @@ window._bd_share_config = {
         "bdStyle": "0",
         "bdSize": "16"
     },
-    "share": {},
+    "share": {}
    // "image": {"viewList": ["qzone", "tsina", "tqq", "renren", "weixin"], "viewText": "分享到：", "viewSize": "16"},
   //  "selectShare": {"bdContainerClass": null, "bdSelectMiniList": ["qzone", "tsina", "tqq", "renren", "weixin"]}
-};
+}
 with (document)
 	0[(getElementsByTagName('head')[0] || body)
 			.appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='

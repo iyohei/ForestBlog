@@ -5,9 +5,21 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ taglib uri="/WEB-INF/myTag.tld" prefix="lyz" %>
 <%@ taglib prefix="rapid" uri="http://www.rapid-framework.org.cn/rapid" %>
-<!-- 不算子计数 -->
+<!--------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------->
+<!--　　　　　　　　　　　　　　　未来不迎，过往不恋　　　　　　　　　　　　　　　-->
+<!--------------------------------------------------------------------------->
+<!--　　　　　　　　　　　　　　　不忘初心，方得始终　　　　　　　　　　　　　　　-->
+<!--------------------------------------------------------------------------->
+<!----IT小青年--------------------------------------------------------------->
+<!--------幻凡ss------------------------------------------------------------->
+<!----------hfanss.com------------------------------------------------------->
+<!-----------联系我:hfans@foxmail.com----------------------------------------->
+<!--------------------------------------------------------------------------->
+<!--　　　　　　　　　　哎哟，迫不及待要看代码了？　　　　　　　　　　　　　　　　-->
+<!--　　　　　别着急，心平气和，慢慢往下拉，有不会的可以问我！　　　　　　　　　　-->
+<!--　　当然，虽然我也不怎么精通前端。。。。。嘻嘻😄　😄　😄　😄　😄　😄　　　　　-->
 <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
     <rapid:override name="breadcrumb">
         <nav class="breadcrumb">
             <div class="bull"><i class="fa fa-volume-up" style="padding-top: 5px;"></i>&nbsp;每日名言:</div>
@@ -25,7 +37,7 @@
             </div>
         </nav>
     </rapid:override>
-
+	
     <rapid:override name="left">
         <div id="primary" class="content-area">
 
@@ -35,7 +47,7 @@
                     <article  class="post type-post">
 
                         <figure class="thumbnail">
-                            <a href="/article/${a.articleCustom.articleId}">
+                            <a href="/article/${a.articleCustom.articleId}" title="${a.articleCustom.articleTitle}">
                                 <img width="280" height="280"
                                      src=" ${a.articleCustom.articleImg}"
                                      class="attachment-content size-content wp-post-image"
@@ -233,8 +245,7 @@
     <rapid:override name="right">
         <%@include file="Public/part/sidebar-2.jsp" %>
     </rapid:override>
-    <%--侧边栏 end--%>
 
-    
+     
 
 <%@ include file="Public/framework.jsp" %>

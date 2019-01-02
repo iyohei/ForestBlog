@@ -4,7 +4,13 @@
 --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
-
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?4e950a5dd7243ac97e882fe04d3fa1f7";
+  var s = document.getElementsByTagName("script")[0]; });
+ </script>
 <%--导航 start--%>
 <header id="masthead" class="site-header" >
 
@@ -12,15 +18,12 @@
     <div id="menu-box"  style="position: fixed;background: rgba(255, 255, 255, 0.7);">
         <div id="top-menu">
                 <span class="nav-search">
-<!--                      <i class="fa fa-search-plus" aria-hidden="true"></i> -->
 						搜索
                 </span>
-            <div class="logo-site"><h1 class="site-title">
+            <div class="logo-site">
                 <a href="/admin" title="${options.optionSiteTitle}">
-               		<img src="https://huanfan-1252958858.cos.ap-shanghai.myqcloud.com/2018/11/hfanss-logo001.png" title="${options.optionSiteTitle}" rel="home">
+            	<img  src="https://blog-1252958858.file.myqcloud.com/2018/12/uugai.com_1546228193719.png" title="${options.optionSiteTitle}" rel="home">
             	</a>
-            </h1>
-<%--                 <p class="site-description">${options.optionSiteDescrption}</p> --%>
             </div><!-- .logo-site -->
             <div id="site-nav-wrap">
                 <div id="sidr-close">
@@ -87,7 +90,7 @@
     <div class="searchbar">
         <form method="get" id="searchform" action="/search">
                 <span>
-                    <input type="text" value="" name="query" id="s" placeholder="输入搜索内容"required="">
+                    <input type="text" value="" name="query" id="s" placeholder="输入搜索内容" required="">
                     <button type="submit" id="searchsubmit">搜索</button>
                 </span>
         </form>
@@ -95,5 +98,56 @@
     <div class="clear"></div>
 </div>
 <%--搜索框 end--%>
-
 <rapid:block name="breadcrumb"></rapid:block>
+<%--右下角联系我   start--%>
+<div class="container">
+            <div class="demo">
+                <div id="service">
+                    <ul>
+                    	<li id="btn1">
+                            <a  class="bottom_btn" id="bottom_btn" href="javascript:void(0)" >
+                               <!--  <div class="hides" style="width:161px;display:none">
+                                    <img src="../css/menu/ll06.png" width="161" height="39" />
+                                </div> -->
+<!--                                 <img src="../css/menu/l06.png" width="37" height="39"/> -->
+                                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="weixin_btn weixin_area" id="weixin"  href="javascript:void(0)">
+								<i class="fa fa-weixin" aria-hidden="true"></i>
+                            	<img src="${options.optionAboutsiteWechat}" width="145" class="weixin_img" style="display:none;margin:-100px 57px 0 0" />
+                            </a>
+                        </li>
+                        <li>
+                            <a  class="qq_btn" href="http://wpa.qq.com/msgrd?V=3&amp;uin=${options.optionAboutsiteQq}&amp;Site=QQ&amp;Menu=yes" target="_blank">
+                            	<i class="fa fa-qq" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li id="btn2">
+                            <a class="top_btn" id="top_btn" href="javascript:void(0)">
+                                <i  class="fa fa-chevron-up" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+<%--右下角联系我   end--%>
+
+
+<%--图片放大显示层  start--%>
+<div id="showImg" style="text-align:center;  display:none;  z-index:999;  width:100%;height: 100%;background-color: rgb(77, 77, 77,0.8);position: fixed; top: 0px;left: 0px;right: 0px; bottom: 0px;margin: auto;">
+	<div style="width: 70%;height:70%;text-align: center;position: fixed;top: 0px;left: 0px;right: 0px;bottom: 50px;margin: auto;">
+		<a href="javascript:void(0);">
+			<img id="showImg_img"  src="" alt="" style="">
+		</a>
+	</div>
+
+</div>
+
+
+<%--图片放大显示层   end--%>
+
+
+

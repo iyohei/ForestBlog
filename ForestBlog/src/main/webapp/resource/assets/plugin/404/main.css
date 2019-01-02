@@ -30,8 +30,9 @@
 #main #header_404 h1 {
     position: relative;
     display: block;
-    font: 72px 'TeXGyreScholaBold', Arial, sans-serif;
-    color: #009688;
+    font: 52px 'TeXGyreScholaBold', Arial, sans-serif;
+/*     color: #009688; */
+    color:#5CACEE;
     text-shadow: 2px 2px #f7f7f7;
     text-align: center;
 }
@@ -47,7 +48,8 @@
     display: inline-block;
     top: -6px;
     margin: 0 10px 5px 0;
-    background: #009688;
+/*     background: #009688; */
+	background: #5CACEE;
     width: 50px;
     height: 50px;
     -moz-box-shadow: 1px 2px white;
@@ -148,7 +150,7 @@
     height: 34px;
     margin: 0 0 0 6px;
     padding: 0 18px;
-    background: #009688;
+    background: #5CACEE;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
@@ -159,7 +161,7 @@
     text-decoration: none;
 }
 #main #content_404 .utilities .button:hover {
-    background: #006666;
+    background: #595959;
 
 }
 

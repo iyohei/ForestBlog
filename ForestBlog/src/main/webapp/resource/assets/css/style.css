@@ -55,18 +55,9 @@ h1{
 /* 	margin: .67em 0; */
 	border-left: 5px solid #e40000;
 }
-h3{
-	font-size:22px;
-}
-h4{
-	font-size:20px;
-}
-h5{
-	font-size:18px;
-}
-h6{
-	font-size:16px;
-}
+
+
+
 pre {
 	border: 1px solid #d1d1d1;
 	line-height: 190%;
@@ -875,7 +866,7 @@ to {
 	#navigation-toggle {
 		display: block;
 		float: none;
-		padding: 0 8px;
+/* 		padding: 5px 8px; */
 		vertical-align: top;
 	}
 	#site-nav .nav-menu {
@@ -931,7 +922,7 @@ to {
 	}
 	#site-nav-wrap {
 		min-height: 30px;
-		margin: 0 10px 0 0;
+		margin: 5 10px 0 0;
 	}
 	/** logo **/
 	.logo-site, .logo-sites {
@@ -1342,7 +1333,7 @@ to {
 }
 
 .breadcrumb .fa-angle-right {
-	font-size: 16px;
+/* 	font-size: 16px; */
 	margin: 0 4px;
 }
 
@@ -1672,6 +1663,7 @@ to {
 	padding: 5px 20px;
 	border-left: 5px solid #5CACEE;
 	border-right: 5px solid #5CACEE;
+	background: #f8f8f8;
 }
 
 .header-sub h1 {
@@ -5896,7 +5888,7 @@ li.search-inf {
 /** 缁涘绨幋鏍х毈娴滐拷640px **/
 @media screen and (max-width: 640px) {
 	.entry-header h1 {
-		text-align: left;
+		text-align: center;
 	}
 	#single-widget .widget {
 		width: 99.6%;

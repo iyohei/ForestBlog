@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="/plugin/layui/css/layui.css">
 </rapid:override>
 
+<rapid:override name="title">
+    <title>申请友链 | ${options.optionSiteTitle}</title>
+</rapid:override>
 
 <rapid:override name="breadcrumb">
     <%--面包屑导航 start--%>
@@ -34,7 +37,7 @@
     <%--博客主体-左侧文章正文 start--%>
     <div id="primary" class="content-area">
         <main id="main" class="site-main" role="main">
-            <article class="post" style="min-height: 500px;">
+            <article class="post" id="post-002" style="min-height: 500px;">
                 <header class="entry-header">
                     <h1 class="entry-title">
                            申请友链
@@ -106,9 +109,6 @@
 </rapid:override>
 
 <rapid:override name="footer-script">
-    <script>
-
-    </script>
 </rapid:override>
 
 <%@ include file="../Public/framework.jsp" %>

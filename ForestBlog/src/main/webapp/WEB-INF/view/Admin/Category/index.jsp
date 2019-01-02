@@ -91,9 +91,9 @@
                 <colgroup>
                     <col width="50">
                     <col width="50">
-                    <col width="300">
-                    <col width="100">
-                    <col width="100">
+                    <col width="150">
+                    <col width="50">
+                    <col width="50">
                     <col width="100">
                 </colgroup>
                 <thead>
@@ -119,14 +119,14 @@
                                 <a href="/category/${c.categoryId}" target="_blank">${c.articleCount}</a>
                             </td>
                             <td>
-                                    <c:choose>
-                                        <c:when test="${c.categoryStatus==1}">
-                                            显示
-                                        </c:when>
-                                        <c:otherwise>
-                                            <span style="color:#FF5722;">隐藏</span>
-                                        </c:otherwise>
-                                    </c:choose>
+                               <c:choose>
+                                   <c:when test="${c.categoryStatus==1}">
+                                      		 显示
+                                   </c:when>
+                                   <c:otherwise>
+                                       <span style="color:#FF5722;">隐藏</span>
+                                   </c:otherwise>
+                               </c:choose>
                             </td>
                             <td>
                                 <a href="/admin/category/edit/${c.categoryId}" class="layui-btn layui-btn-mini">编辑</a>
@@ -149,7 +149,7 @@
                                     <td>
                                         <c:choose>
                                             <c:when test="${c2.categoryStatus==1}">
-                                                显示
+                                               		 显示
                                             </c:when>
                                             <c:otherwise>
                                                 <span style="color:#FF5722;">隐藏</span>

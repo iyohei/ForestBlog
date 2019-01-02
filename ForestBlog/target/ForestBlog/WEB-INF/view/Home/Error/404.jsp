@@ -22,22 +22,24 @@
 
     </style>
 </head>
-<body>
+<body style="text-align: center;">
 <div id="page" class="site" style="transform: none;" >
 
 
     <div id="content" class="site-content" style="transform: none;" >
 
         <%--博客主体-左侧正文 start--%>
-        <div id="primary" class="content-area">
+        <div id="primary" class="content-area" style="width: 100%;">
             <main id="main" class="site-main" role="main">
 
                 <header id="header_404">
-                    <h1><span class="icon">!</span>404<span class="sub">page not found</span></h1>
+                    <h1 style="border: 0;"><span class="icon">!</span>404</h1>
                 </header>
                 <div id="content_404">
                     <h2>您打开的这个的页面不存在！</h2>
-                    <p>当您看到这个页面,表示您的访问出错,这个错误是您打开的页面不存在,请确认您输入的地址是正确的,如果是在本站点击后出现这个页面,请联系站长进行处理,或者请通过下边的搜索重新查找资源。</p>
+                    <p>当您看到这个页面,表示您的访问出错,这个错误是您打开的页面不存在,请确认您输入的地址是正确的
+                   	<br> 如果是在本站点击后出现这个页面,请联系站长进行处理,或者请通过下边的搜索重新查找资源。</p>
+                    <h2>原Hexo博客文章已整合进博客中，请直接搜索使用</h2>
                     <div class="utilities">
                         <center>
                         <form name="formsearch" action="/search" id="formkeyword">
@@ -46,10 +48,11 @@
                                 <button id="search"></button>
                             </div>
                         </form>
+                        <br><br>
                         <div id="btn">
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <a class="button" href="/">返回首页</a>
-                            <a class="button" href="http://wpa.qq.com/msgrd?v=3&uin=847064370&site=qq&menu=yes">联系站长</a>
+                            <a class="button" href="https://wpa.qq.com/msgrd?v=3&uin=2158798&site=qq&menu=yes">联系站长</a>
                             <div class="clear"></div>
                         </div>
                         </center>

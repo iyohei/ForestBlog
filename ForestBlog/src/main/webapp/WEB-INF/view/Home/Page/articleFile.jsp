@@ -14,7 +14,7 @@
     </rapid:override>
 
     <rapid:override name="title">
-        <title>文章归档--${options.optionSiteTitle}</title>
+        <title>文章归档 | ${options.optionSiteTitle}</title>
     </rapid:override>
 
     <rapid:override name="breadcrumb">

@@ -8,7 +8,7 @@
 
 
 <rapid:override name="title">
-    <title>搜索结果</title>
+    <title>搜索结果-${articleSearchVoList.get(0).query}相关 | ${options.optionSiteTitle}</title>
 </rapid:override>
 
 <rapid:override name="breadcrumb">
@@ -17,7 +17,7 @@
         <a class="crumbs" href="/">
             <i class="fa fa-home"></i>首页</a>
             <i class="fa fa-angle-right"></i>
-        搜索 ${articleSearchVoList.get(0).query} 找到 ${articleSearchVoList.get(0).page.totalCount} 个与之相关的文章
+        搜索 &nbsp;<a style="color:red">${articleSearchVoList.get(0).query} </a>&nbsp;找到 ${articleSearchVoList.get(0).page.totalCount} 个与之相关的文章
     </nav>
     <%--面包屑导航 end--%>
 </rapid:override>

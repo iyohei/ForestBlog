@@ -14,7 +14,7 @@
 </rapid:override>
 
 <rapid:override name="title">
-	<title>${tagCustom.tagName}</title>
+	<title>${tagCustom.tagName} | ${options.optionSiteTitle}</title>
 </rapid:override>
 
 <rapid:override name="breadcrumb">

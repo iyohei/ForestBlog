@@ -48,7 +48,7 @@
 
     <rapid:override name="left">
         <%--博客主体-左侧正文 start--%>
-        <div id="primary" class="content-area">
+        <div id="primary" class="content-area" style="width: 100%;">
             <main id="main" class="site-main">
                     <c:choose>
                         <c:when test="${articleListVoList!=null}">
@@ -253,4 +253,4 @@
         <%--  博客主体-左侧正文 end--%>
     </rapid:override>
 
-<%@ include file="../Public/framework.jsp" %>
+<%@ include file="../Public/framework2.jsp" %>

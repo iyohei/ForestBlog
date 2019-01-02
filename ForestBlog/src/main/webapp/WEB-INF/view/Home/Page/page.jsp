@@ -5,18 +5,18 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ taglib prefix="rapid" uri="http://www.rapid-framework.org.cn/rapid" %>
 
-
-
+<rapid:override name="title">
+    <title>${pageCustom.pageTitle} | ${options.optionSiteTitle}</title>
+</rapid:override>
 <rapid:override name="breadcrumb">
+<!-- 关于本站或者  自定义页面 -->
     <%--面包屑导航 start--%>
     <nav class="breadcrumb">
         <a class="crumbs" href="/">
             <i class="fa fa-home"></i>首页
         </a>
-        <i class="fa fa-angle-right">
-            ${pageCustom.pageTitle}
-        </i>
-
+       	<i class="fa fa-angle-right"></i>
+   ${pageCustom.pageTitle}
         <i class="fa fa-angle-right"></i>
         正文
     </nav>
@@ -28,7 +28,7 @@
     <%--博客主体-左侧文章正文 start--%>
     <div id="primary" class="content-area">
         <main id="main" class="site-main" role="main">
-            <article class="post" >
+            <article class="post" id="post-002">
                 <header class="entry-header">
                     <h1 class="entry-title">
                             ${pageCustom.pageTitle}

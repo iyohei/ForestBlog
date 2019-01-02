@@ -12,7 +12,9 @@
 </style>
 	<link rel="stylesheet" href="/plugin/layui/css/layui.css">
 </rapid:override>
-
+<rapid:override name="title">
+    <title>留言板 | ${options.optionSiteTitle}</title>
+</rapid:override>
 
 <rapid:override name="breadcrumb">
 	<%--面包屑导航 start--%>
@@ -28,7 +30,7 @@
 	<%--博客主体-左侧文章正文 start--%>
 	<div id="primary" class="content-area">
         <main id="main" class="site-main" role="main">
-            <article class="post">
+            <article class="post" id="post-002">
                 <header class="entry-header">
                     <h1 class="entry-title">
                            留言板
@@ -252,6 +254,7 @@
             });
         });
     </script>
+	
 </rapid:override>
 
 <%@ include file="../Public/framework.jsp"%>

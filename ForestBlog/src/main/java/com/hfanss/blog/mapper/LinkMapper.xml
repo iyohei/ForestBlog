@@ -147,6 +147,15 @@
     </set>
     where link_id = #{linkId,jdbcType=INTEGER}
   </update>
+  <update id="updateByStatus" parameterType="com.hfanss.blog.entity.Link" >
+    update link
+    <set >
+      <if test="linkStatus != null" >
+        link_status = #{linkStatus,jdbcType=INTEGER},
+      </if>
+    </set>
+    where link_id = #{linkId,jdbcType=INTEGER}
+  </update>
   <update id="updateByPrimaryKey" parameterType="com.hfanss.blog.entity.Link" >
     update link
     set link_url = #{linkUrl,jdbcType=VARCHAR},

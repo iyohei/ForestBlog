@@ -66,6 +66,24 @@ public class BackLinkController {
         linkService.deleteLink(id);
         return "redirect:/admin/link";
     }
+    //显示链接
+    @RequestMapping(value = "/update1/{id}")
+    public String update1Link(@PathVariable("id") Integer id) throws Exception {
+    	Link link = new Link();
+    	link.setLinkId(id);
+    	link.setLinkStatus(1);
+        linkService.updateLink(link);
+        return "redirect:/admin/link";
+    }
+    //隐藏链接
+    @RequestMapping(value = "/update2/{id}")
+    public String update2Link(@PathVariable("id") Integer id) throws Exception {
+    	Link link = new Link();
+    	link.setLinkId(id);
+    	link.setLinkStatus(0);
+    	linkService.updateLink(link);
+        return "redirect:/admin/link";
+    }
 
     //编辑链接页面显示
     @RequestMapping(value = "/edit/{id}")

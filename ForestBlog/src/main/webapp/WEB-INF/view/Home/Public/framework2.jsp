@@ -4,20 +4,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ taglib prefix="rapid" uri="http://www.rapid-framework.org.cn/rapid" %>
-<!--------------------------------------------------------------------------->
-<!--------------------------------------------------------------------------->
-<!--　　　　　　　　　　　　　　　未来不迎，过往不恋　　　　　　　　　　　　　　　-->
-<!--------------------------------------------------------------------------->
-<!--　　　　　　　　　　　　　　　不忘初心，方得始终　　　　　　　　　　　　　　　-->
-<!--------------------------------------------------------------------------->
-<!----IT小青年--------------------------------------------------------------->
-<!--------幻凡ss------------------------------------------------------------->
-<!----------hfanss.com------------------------------------------------------->
-<!-----------联系我:hfans@foxmail.com----------------------------------------->
-<!--------------------------------------------------------------------------->
-<!--　　　　　　　　　　哎哟，迫不及待要看代码了？　　　　　　　　　　　　　　　　-->
-<!--　　　　　别着急，心平气和，慢慢往下拉，有不会的可以问我！　　　　　　　　　　-->
-<!--　　当然，虽然我也不怎么精通前端。。。。。嘻嘻😄　😄　😄　😄　😄　😄　　　　　-->
+
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -55,19 +42,22 @@
     <%@ include file="part/header.jsp" %>
     <div id="content" class="site-content" style="transform: none;">
         <rapid:block name="left"></rapid:block>
-        <rapid:block name="right">
+        <%-- <rapid:block name="right">
             <%@ include file="part/sidebar-1.jsp" %>
-        </rapid:block>
+        </rapid:block> --%>
     </div>
     <div class="clear"></div>
     <rapid:block name="link"></rapid:block>
     <%@ include file="part/footer.jsp"%>
 
 </div>
+<!-- 	<script src="/js/jquery.js"></script> -->
     <script src="/js/jquery.min.js"></script>
     <script src="/js/superfish.js"></script>
     <script src="/js/script.js"></script>
     <script src="/plugin/layui/layui.all.js"></script>
+<!--     <script src="/js/fancybox.js"></script> -->
+<!--     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script> -->
 
 <rapid:block name="footer-script"></rapid:block>
 

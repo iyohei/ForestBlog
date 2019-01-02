@@ -13,7 +13,7 @@
 <%--</rapid:override>--%>
 
 <rapid:override name="title">
-    <title>${articleDetailVo.articleCustom.articleTitle}</title>
+    <title>${articleDetailVo.articleCustom.articleTitle} | ${options.optionSiteTitle}</title>
 </rapid:override>
 
 <rapid:override name="header-style">
@@ -57,7 +57,7 @@
     <%--博客主体-左侧文章正文 start--%>
     <div id="primary" class="content-area">
         <main id="main" class="site-main" role="main">
-            <article class="post">
+            <article class="post" id="post-002">
                 <header class="entry-header">
                     <h1 class="entry-title">
                             ${articleDetailVo.articleCustom.articleTitle}
@@ -500,15 +500,16 @@
     <script src="/js/jquery.cookie.js"></script>
 
     <script type="text/javascript">
+//     pr();
         increaseViewCount();
         layui.code({
             elem: 'pre',//默认值为.layui-code
            // skin: 'notepad', //如果要默认风格，不用设定该key。
             about: false
         });
+        
+        
+        
     </script>
-
 </rapid:override>
-
-
 <%@ include file="../Public/framework.jsp" %>

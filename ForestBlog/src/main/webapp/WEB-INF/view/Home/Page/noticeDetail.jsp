@@ -12,7 +12,9 @@
         }
     </style>
 </rapid:override>
-
+<rapid:override name="title">
+    <title>每日名言 | ${options.optionSiteTitle}</title>
+</rapid:override>
 
 <rapid:override name="breadcrumb">
     <%--面包屑导航 start--%>
@@ -21,7 +23,7 @@
             <i class="fa fa-home"></i>首页
         </a>
         <i class="fa fa-angle-right"></i>
-        博客公告
+        每日名言
         <i class="fa fa-angle-right"></i>
         正文
     </nav>
@@ -33,7 +35,7 @@
     <%--博客主体-左侧文章正文 start--%>
     <div id="primary" class="content-area">
         <main id="main" class="site-main" role="main">
-            <article class="post" style="min-height: 500px;">
+            <article class="post" id="post-002" style="min-height: 500px;">
                 <header class="entry-header">
                 	<c:forEach items="${noticeCustom }" var="notice">
 	                    <h1 class="entry-title">

@@ -47,8 +47,11 @@ public class CategoryController {
 		//该分类信息
 		CategoryCustom categoryCustom = categoryService.getCategoryById(1,cateId);
 		modelAndView.addObject("categoryCustom",categoryCustom);
-
-		modelAndView.setViewName("Home/Page/articleListByCategory");
+		if (cateId==23 | cateId==24 | cateId==30 | cateId==31 | cateId==32 | cateId==33 ) {
+			modelAndView.setViewName("Home/Page/articleListByCategory2");
+		}else {
+			modelAndView.setViewName("Home/Page/articleListByCategory");
+		}
 		return modelAndView;
 	}
 	
