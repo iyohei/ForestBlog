@@ -72,7 +72,7 @@
                                 </div>
                             </div>
                             <div class="layui-form-item">
-                                <button class="layui-btn" lay-submit="">提交申请</button>
+                                <button class="layui-btn" lay-submit="" style="background-color:#5CACEE">提交申请</button>
                             </div>
                         </form>
 

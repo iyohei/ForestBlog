@@ -40,6 +40,9 @@
       <if test="noticeTitle != null" >
         notice_title,
       </if>
+      <if test="noticeCreateTime != null" >
+        notice_create_time,
+      </if>
       <if test="noticeUpdateTime != null" >
         notice_update_time,
       </if>
@@ -53,6 +56,9 @@
       </if>
       <if test="noticeTitle != null" >
         #{noticeTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="noticeCreateTime != null" >
+        #{noticeCreateTime,jdbcType=TIMESTAMP},
       </if>
       <if test="noticeUpdateTime != null" >
         #{noticeUpdateTime,jdbcType=TIMESTAMP},

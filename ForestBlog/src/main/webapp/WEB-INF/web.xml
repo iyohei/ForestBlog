@@ -122,7 +122,16 @@
           <trim-directive-whitespaces>true</trim-directive-whitespaces>
         </jsp-property-group>
       </jsp-config>
-
+    <!-- 跳转https 生产环境时开启 -->  
+	<!-- <security-constraint>  
+	     <web-resource-collection >  
+	        <web-resource-name >SSL</web-resource-name>  
+	        <url-pattern>/*</url-pattern>  
+	    </web-resource-collection>  
+	    <user-data-constraint>  
+	        <transport-guarantee>CONFIDENTIAL</transport-guarantee>  
+	    </user-data-constraint>  
+	</security-constraint> -->
 
       <!--<error-page>-->
         <!--<error-code>403</error-code>-->

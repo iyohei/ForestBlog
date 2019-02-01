@@ -8,7 +8,8 @@
 <%--博客主体-右侧侧边栏 start--%>
 <div id="sidebar" class="widget-area all-sidebar"
      style="position: relative; overflow: visible; box-sizing: border-box; min-height: 1px;">
-
+	
+	
     <%--网站概况 start--%>
     <aside id="php_text-22" class="widget php_text">
         <h3 class="widget-title">
@@ -22,7 +23,7 @@
                 <li><i class="fa fa-tags"></i> 标签总数：${siteBasicStatistics[3]} 个</li>
                 <li><i class="fa fa-link"></i> 链接数量：${siteBasicStatistics[4]} 个</li>
                 <li><i class="fa fa-eye"></i> 总浏览量：<span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span></li>
-<%--                 <li><i class="fa fa-eye"></i> 文章点击总量：${siteBasicStatistics[5]} 次</li> --%>
+<!--                 <li><i class="fa fa-eye"></i> 负载均衡：001</li> -->
                 <li><i class="fa fa-pencil-square-o"></i> 最后更新：
                     <span style="color:#5CACEE">
                                         <fmt:formatDate value="${lastUpdateArticle.articleUpdateTime}" pattern="yyyy年MM月dd日"/>
@@ -38,7 +39,7 @@
     <%--热评文章 start--%>
     <aside class="widget hot_comment">
         <h3 class="widget-title">
-            <i class="fa fa-align-right"></i>热评文章
+            <i class="fa fa-align-right"></i>热门文章
         </h3>
         <div id="hot_comment_widget">
             <ul>
@@ -145,7 +146,12 @@
             <ul>
                 <c:forEach items="${recentCommentList}" var="r">
                 <li style="border: none;">
-                    <a href="/article/${r.articleCustom.articleId}/#anchor-comment-${r.commentCustom.commentId}" title="${r.articleCustom.articleTitle}" rel="external nofollow">
+                	<c:if test="${r.commentCustom.commentArticleId==0}">
+                		<a href="/message/#anchor-comment-${r.commentCustom.commentId}" title="${r.articleCustom.articleTitle}" rel="external nofollow">
+                	</c:if>
+                	<c:if test="${r.commentCustom.commentArticleId!=0}">
+                    	<a href="/article/${r.commentCustom.commentArticleId}/#anchor-comment-${r.commentCustom.commentId}" title="${r.articleCustom.articleTitle}" rel="external nofollow">
+                    </c:if>
                         <img alt=""src="${r.commentCustom.commentAuthorAvatar}" class="avatar avatar-64 photo" height="64" width="64">
                         <span class="comment_author">
                             <strong>${r.commentCustom.commentAuthorName}</strong>

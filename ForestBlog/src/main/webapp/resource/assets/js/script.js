@@ -2,6 +2,10 @@ $(document)
 		.ready(
 				
 				function() {
+					//强制https
+					/*if (window.location.protocol=="http:") {
+						window.location.href="https:"+window.location.host;
+					};*/
 					/**给正文中的图片加 点击放大特效  JS   start*/
 					$('#post-002 img').each(function() {
 					    if ($(this).parent().hasClass('fancybox')) return;
@@ -13,11 +17,18 @@ $(document)
 						var url = $(this).attr('data-src');
 						$("#showImg_img").attr("src",url);
 						$("#showImg").show();
+						document.body.parentNode.style.overflowY = "hidden";//隐藏且禁用横向纵向两个滚动条
 						
+					});
+					$("#showImg").click(function(){
+						$("#showImg").hide();
+						$("#showImg_img").attr("src","");
+						document.body.parentNode.style.overflowY = "auto";//开启横向纵向两个滚动条
 					});
 					$("#showImg_img").click(function(){
 						$("#showImg").hide();
 						$("#showImg_img").attr("src","");
+						document.body.parentNode.style.overflowY = "auto";//开启横向纵向两个滚动条
 					});
 					/**给正文中的图片加 点击放大特效  JS   end*/
 					
@@ -33,10 +44,8 @@ $(document)
 	                    $("html,body").animate({scrollTop:0}, 500);
 	                });//页面滑动到底部 js
 	                $("#bottom_btn").click(function() {
-	                    $("html,body").animate({scrollTop: window.outerHeight}, 500);
+	                    $("html,body").animate({scrollTop: document.body.scrollHeight}, 500);
 	                });
-					
-					
 					
 					// 搜索
 					$(".nav-search").click(function() {

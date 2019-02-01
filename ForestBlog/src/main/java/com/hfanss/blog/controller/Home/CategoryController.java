@@ -37,21 +37,23 @@ public class CategoryController {
 	@ResponseBody
 	public ModelAndView ArticleListByCategoryView(@PathVariable("cateId") Integer cateId) throws Exception {
 		ModelAndView modelAndView = new ModelAndView();
-		//设置每页显示条数
-		int pageSize = 10;
-		List<ArticleListVo> articleListVoList = categoryService.listArticleWithCategoryByPage(1,null,pageSize,cateId);
-
-		//如果articleListVoList=null表示该分类不存在，如果=0表示该分类暂时没有文章
-        modelAndView.addObject("articleListVoList",articleListVoList);
-
-		//该分类信息
-		CategoryCustom categoryCustom = categoryService.getCategoryById(1,cateId);
-		modelAndView.addObject("categoryCustom",categoryCustom);
-		if (cateId==23 | cateId==24 | cateId==30 | cateId==31 | cateId==32 | cateId==33 ) {
+		/*if (cateId==23 | cateId==24 | cateId==30 | cateId==31 | cateId==32 | cateId==33 ) {
+			List<ArticleListVo> articleListVoList = categoryService.listArticleWithCategoryByPage(1,null,12,cateId);
+			//如果articleListVoList=null表示该分类不存在，如果=0表示该分类暂时没有文章
+			modelAndView.addObject("articleListVoList",articleListVoList);
+			//该分类信息
+			CategoryCustom categoryCustom = categoryService.getCategoryById(1,cateId);
+			modelAndView.addObject("categoryCustom",categoryCustom);
 			modelAndView.setViewName("Home/Page/articleListByCategory2");
-		}else {
+		}else {*/
+			List<ArticleListVo> articleListVoList = categoryService.listArticleWithCategoryByPage(1,null,10,cateId);
+			//如果articleListVoList=null表示该分类不存在，如果=0表示该分类暂时没有文章
+			modelAndView.addObject("articleListVoList",articleListVoList);
+			//该分类信息
+			CategoryCustom categoryCustom = categoryService.getCategoryById(1,cateId);
+			modelAndView.addObject("categoryCustom",categoryCustom);
 			modelAndView.setViewName("Home/Page/articleListByCategory");
-		}
+//		}
 		return modelAndView;
 	}
 	
@@ -60,15 +62,12 @@ public class CategoryController {
 	@ResponseBody
 	public  ModelAndView ArticleListByCategoryAndPageView(@PathVariable("pageNow") Integer pageNow,@PathVariable("cateId") Integer cateId) throws Exception {
 		ModelAndView modelAndView = new ModelAndView();
-		//设置每页显示条数
-		int pageSize = 10;
-		List<ArticleListVo> articleListVoList = categoryService.listArticleWithCategoryByPage(1,pageNow,pageSize,cateId);
+		List<ArticleListVo> articleListVoList = categoryService.listArticleWithCategoryByPage(1,pageNow,10,cateId);
 		modelAndView.addObject("articleListVoList",articleListVoList);
 		modelAndView.setViewName("Home/Page/articleListByCategory");
-
-        //该分类信息
-        CategoryCustom categoryCustom = categoryService.getCategoryById(1,cateId);
-        modelAndView.addObject("categoryCustom",categoryCustom);
+		//该分类信息
+		CategoryCustom categoryCustom = categoryService.getCategoryById(1,cateId);
+		modelAndView.addObject("categoryCustom",categoryCustom);
 		return modelAndView;
 	}
 

@@ -31,7 +31,7 @@
                 notice_status=#{status}
             </if>
         </where>
-        ORDER BY notice_status ASC, notice_order DESC, notice_id ASC
+        ORDER BY notice_status ASC, notice_order DESC, notice_id DESC
     </select>
 
 

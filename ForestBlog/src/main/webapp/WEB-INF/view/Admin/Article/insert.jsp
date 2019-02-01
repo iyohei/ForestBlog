@@ -121,7 +121,7 @@
             //自定义验证规则
             form.verify({
                 title: function (value) {
-                    if (value.length < 5) {
+                    if (value.length < 2) {
                         return '标题至少得5个字符啊';
                     }
                 }
@@ -154,7 +154,6 @@
             layui.use('code', function(){ //加载code模块
                 layui.code();
             });
-
             //二级联动
             form.on("select(articleParentCategoryId)",function () {
                 var optionstring = "";

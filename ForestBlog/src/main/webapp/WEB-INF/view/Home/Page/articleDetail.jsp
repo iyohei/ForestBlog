@@ -57,7 +57,7 @@
     <%--博客主体-左侧文章正文 start--%>
     <div id="primary" class="content-area">
         <main id="main" class="site-main" role="main">
-            <article class="post" id="post-002">
+            <article class="post" id="post-002" >
                 <header class="entry-header">
                     <h1 class="entry-title">
                             ${articleDetailVo.articleCustom.articleTitle}
@@ -65,6 +65,11 @@
                 </header><!-- .entry-header -->
                 <div class="entry-content">
                     <div class="single-content">
+<!--                     		articleDetailVo.categoryCustomList}" var="c"> -->
+<%--                                     <a href="/category/${c.categoryId}"> --%>
+                    		<c:if test="${articleDetailVo.categoryCustomList[0].categoryId==24}">
+                    					<img alt="" src="${articleDetailVo.articleCustom.articleImg}">
+                    		</c:if>
                             ${articleDetailVo.articleCustom.articleContent}
                     </div>
                     <!-- <div class="s-weixin">

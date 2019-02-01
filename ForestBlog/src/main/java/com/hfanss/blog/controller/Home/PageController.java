@@ -45,14 +45,19 @@ public class PageController {
 	@RequestMapping(value = "/{key}")
 	public ModelAndView ArticleDetailView(@PathVariable("key") String key) throws Exception{
 		ModelAndView modelAndView = new ModelAndView();
-		PageCustom pageCustom = pageService.getPageByKey(1,key);
-		if(pageCustom!=null) {
-			modelAndView.addObject("pageCustom",pageCustom);
-			modelAndView.setViewName("Home/Page/page");
-		} else {
-			modelAndView.setViewName("Home/Error/404");
+		if ("music".equals(key)) {
+			modelAndView.setViewName("Home/Page/pageMusic");
+			return modelAndView;
+		}else {
+			PageCustom pageCustom = pageService.getPageByKey(1,key);
+			if(pageCustom!=null) {
+				modelAndView.addObject("pageCustom",pageCustom);
+				modelAndView.setViewName("Home/Page/page");
+			} else {
+				modelAndView.setViewName("Home/Error/404");
+			}
+			return modelAndView;
 		}
-		return modelAndView;
 
 	}
 

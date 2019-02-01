@@ -41,7 +41,7 @@ public interface ArticleService {
 
 	//分页显示()
 	public List<ArticleListVo> listArticleByPage(Integer status,Integer pageNow,Integer pageSize) throws Exception;
-	
+	List<ArticleListVo> listArticleByPage2(Integer status, Integer pageNow, Integer pageSize) throws Exception;
 	//文章详情页面显示
 	public ArticleDetailVo getArticleDetailById(Integer id) throws Exception;
 	
@@ -80,4 +80,5 @@ public interface ArticleService {
 
 	//获得最后更新记录
 	public ArticleCustom getLastUpdateArticle() throws Exception;
+
 }

@@ -22,6 +22,16 @@
     </sql>
 
 
+    <!--获取文章总数2-->
+    <select id="countArticle2" resultType="Integer">
+        SELECT COUNT(*) FROM `article`
+        <where>
+            <if test="status!=null">
+                article_status=#{status}
+            </if>
+            AND article_parent_category_id=22
+        </where>
+    </select>
     <!--获取文章总数-->
     <select id="countArticle" resultType="Integer">
         SELECT COUNT(*) FROM `article`
@@ -103,6 +113,20 @@
     </select>
 
 
+    <!--通过分页查询文章-->
+    <select id="listArticleByPage2" resultType="com.hfanss.blog.entity.custom.ArticleCustom">
+         SELECT
+         <include refid="article_table_all_columns"/>
+         FROM `article`
+         <where>
+            <if test="status!=null">
+                article_status=#{status}
+            </if>
+            AND article_parent_category_id=22
+         </where>
+         ORDER BY article_status ASC, article_order DESC, article_id DESC
+         limit #{startPos},#{pageSize}
+    </select>
     <!--通过分页查询文章-->
     <select id="listArticleByPage" resultType="com.hfanss.blog.entity.custom.ArticleCustom">
          SELECT

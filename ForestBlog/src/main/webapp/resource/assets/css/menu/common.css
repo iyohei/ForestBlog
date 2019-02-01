@@ -515,7 +515,7 @@ fieldset legend {
 #service li i {
 	margin-top: 7px;
 	font-size: 18px;
-	color: rgba(211, 211, 211);
+	color: rgb(211, 211, 211);
 }
 
 #service li img {
@@ -528,7 +528,7 @@ fieldset legend {
 	display: block;
 	width: 35px;
 	text-align: center;
-	background-color:rgb(255, 255, 255);
+	background-color:rgb(255, 255, 255,0.8);
 	border: 1px solid rgb(211, 211, 211);
 	border-radius: 4px;
 }

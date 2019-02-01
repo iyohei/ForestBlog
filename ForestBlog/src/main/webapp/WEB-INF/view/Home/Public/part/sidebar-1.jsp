@@ -25,7 +25,7 @@
         <%--热评文章 start--%>
         <aside class="widget hot_comment" >
             <h3 class="widget-title">
-                <i class="fa fa-align-right"></i>热评文章
+                <i class="fa fa-align-right"></i>热门文章
             </h3>
             <div id="hot_comment_widget">
                 <ul>

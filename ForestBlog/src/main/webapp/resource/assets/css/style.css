@@ -19,6 +19,65 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
 	vertical-align: baseline;
 }
 
+hr{
+	margin: 2.4em auto;
+	border: none;
+    border-top-color: currentcolor;
+    border-top-style: none;
+    border-top-width: medium;
+	border-top: 1px solid #eee;
+	position: relative;
+}
+.post02 {
+	min-width: 250px;
+	width: 24%;
+	padding: 0;
+	float: left;
+	text-align: center;
+	margin:5px 5px 5px 5px;
+	background-color: #ffffff
+}
+@media screen and (max-width: 1080px)and (min-width: 795px) {
+	.post02 {
+	width: 32%;
+	min-width: 250px;
+	padding: 0;
+	float: left;
+	text-align: center;
+	margin:5px 5px 5px 5px;
+	background-color: #ffffff
+	}
+}
+
+.footer-div-a > .footer-div-b {
+    list-style: none;
+    width: 100%;
+}
+@media screen and (max-width: 795px)and (min-width: 556px) {
+	.post02 {
+	width: 48%;
+	min-width: 250px;
+	padding: 0;
+	float: left;
+	text-align: center;
+	margin:5px 5px 5px 5px;
+	background-color: #ffffff
+	}
+}
+@media screen and (max-width: 556px)and (min-width: 250px) {
+	.post02 {
+	width: 98%;
+	min-width: 250px;
+	padding: 0;
+	float: left;
+	text-align: center;
+	margin:5px 5px 5px 5px;
+	background-color: #ffffff
+	}
+}
+
+
+
 html {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -46,17 +105,16 @@ article, aside, details, figcaption, figure, footer, header, main, nav,
 	section {
 	display: block;
 }
-h1{
-	font-size:26px;
+
+h1 {
+	font-size: 26px;
 	line-height: 190%;
 	margin: 10px -21px;
 	padding: 0 25px;
-/* 	border-left: 8px solid #e40000; */
-/* 	margin: .67em 0; */
-	border-left: 5px solid #e40000;
+	/* 	border-left: 8px solid #e40000; */
+	/* 	margin: .67em 0; */
+/* 	border-left: 5px solid #e40000; */
 }
-
-
 
 pre {
 	border: 1px solid #d1d1d1;
@@ -87,24 +145,36 @@ dd {
 }
 
 table, th, td {
-	border: 1px solid #ddd;
+/* 	border: 1px solid #ddd; */
 }
 
 table {
+	width: 100%;
 	border-collapse: separate;
 	border-spacing: 0;
 	border-width: 1px 0 0 1px;
 	margin: 0 0 10px;
+	border:1px solid #ddd;
+}
+table tbody{
+	border-bottom: 1px solid #ddd;
+	border-top: 1px solid #ddd;
 }
 
+
+table tr:nth-child(2n) {
+    background: #f7f8f8;
+}
 caption, th, td {
 	font-weight: normal;
 	text-align: left;
+	border:1px solid #ddd;
 }
 
 th {
 	border-width: 0 1px 1px 0;
 	font-weight: 700;
+	background-color: #eff3f5;
 }
 
 td {
@@ -112,13 +182,12 @@ td {
 }
 
 th, td {
-	padding: 5px;
+/* 	padding: 5px; */
 }
 
 blockquote:before, blockquote:after, q:before, q:after {
 	content: "";
 }
-
 
 blockquote, q {
 	-webkit-hyphens: none;
@@ -176,15 +245,23 @@ keyframes fade-in { 0% {
 40%
 {
 opacity
+
+
 :
+
  
+
 0;
 }
 100%
 {
 opacity
+
+
 :
+
  
+
 1;
 }
 }
@@ -196,15 +273,23 @@ opacity
 40%
 {
 opacity
+
+
 :
+
  
+
 0;
 }
 100%
 {
 opacity
+
+
 :
+
  
+
 1;
 }
 }
@@ -858,6 +943,53 @@ to {
 		width: 98%;
 	}
 }
+@media screen and (max-width: 400px){
+	.user-login {
+		display: none;
+	}
+	.top-menu {
+/* 		float: none; */
+		width: 98%
+	}
+	.top-menu li {
+    float: left;
+/*     padding: 0 5px; */
+    padding-left: 30px;
+	}
+}
+@media screen and (max-width: 362px){
+	
+	.top-menu li {
+    float: left;
+/*     padding: 0 5px; */
+    padding-left: 20px;
+	}
+	
+}
+.footer-div-d{
+	padding-left: 10px; 
+	padding-top: 7px; 
+	padding-bottom: 7px; 
+	text-align: left;
+}
+
+
+@media screen and (max-width: 310px){
+	
+	.top-nav {
+    display: none;
+	}
+	.footer-div-c{
+		display: none;
+	}
+	.footer-div-d{
+	padding-left: 10px; 
+	padding-top: 7px; 
+	padding-bottom: 7px; 
+	text-align: center;
+}
+}
+
 
 @media only screen and (max-width: 900px) {
 	#menu-box {
@@ -866,7 +998,7 @@ to {
 	#navigation-toggle {
 		display: block;
 		float: none;
-/* 		padding: 5px 8px; */
+		/* 		padding: 5px 8px; */
 		vertical-align: top;
 	}
 	#site-nav .nav-menu {
@@ -953,9 +1085,6 @@ to {
 		margin: 0 0 5px 20px;
 		padding: 0 8px 2px;
 		border: 1px solid #ddd;
-	}
-	#top-header {
-		display: none;
 	}
 }
 /** 缁夎濮╃粩锟� **/
@@ -1333,7 +1462,7 @@ to {
 }
 
 .breadcrumb .fa-angle-right {
-/* 	font-size: 16px; */
+	/* 	font-size: 16px; */
 	margin: 0 4px;
 }
 
@@ -1722,7 +1851,7 @@ to {
 /** 閹烘帞澧楅弽宄扮础 **/
 .single-content p, .single-content ul, .single-content ol,
 	.single-content dd, .single-content pre, .single-content hr {
-	margin: 0 0 5px 0;
+	margin: 0 0 0 0;
 	-webkit-hyphens: auto;
 	-moz-hyphens: auto;
 	-ms-hyphens: auto;
@@ -1737,20 +1866,23 @@ to {
 }
 
 .single-content code {
-	background: #f1f1f1;
+	/* background: #f1f1f1;
 	color: #555;
 	margin: 0 2px;
 	padding: 2px 4px;
+	border-radius: 2px; */
+	color: #c7254e;
+	background-color: #f9f2f4;
 	border-radius: 2px;
 }
 
 .single-content h2 {
-	font-size: 17px;
-	font-size: 1.7rem;
+	font-size: 23px;
 	line-height: 190%;
 	margin: 10px -21px;
 	padding: 0 25px;
-/* 	border-left: 5px solid #e40000; */
+/* 		border-left: 5px solid #e40000; */
+	border-bottom: 1px solid #eee;
 }
 
 .single-content h3 {
@@ -1807,11 +1939,11 @@ to {
 }
 
 .single-content p {
-	text-indent: 2em;
+/* 	text-indent: 2em; */
 }
 
 .single-content ul li, .single-content ol li {
-	margin: 0 35px 0 50px;
+	margin: 0 20px 0 20px;
 	line-height: 190%;
 }
 
@@ -1836,21 +1968,17 @@ to {
 }
 
 blockquote {
-	/* width: 100%;
-	color: #8b8b8b;
-	margin: 0 auto;
-	padding: 10px;
-	clear: both;
-	border: 1px dashed #ddd; */
-	margin: 0;
-	padding: 0 15px;
-	color: #666;
-	border-left: 4px solid #ddd;
+	display: block;
+	padding: 16px;
+	margin: 15px 0 15px;
+	border-left: 8px solid #dddfe4;
+	background: #eef0f4;
+	overflow: auto;
 }
 
 .single-content img, .comment-list p img {
 	max-width: 100%;
-	width: auto\9;
+	width: auto;
 	height: auto;
 	vertical-align: middle;
 	display: block;
@@ -3371,45 +3499,109 @@ img.alignleft {
 }
 
 33
-.3 % {
-	-webkit-transform: translateY(-6px);
-	transform: translateY(-6px);
-}
-
-49
-.95 % {
-	-webkit-transform: translateY(4px);
-	transform: translateY(4px);
-}
-
-66
-.6 % {
-	-webkit-transform: translateY(-2px);
-	transform: translateY(-2px);
-}
-
-83
-.25 % {
-	-webkit-transform: translateY(1px);
-	transform: translateY(1px);
-}
-
-100%
+.3
+ 
+%
 {
 -webkit-transform
 :
  
 translateY
-(0);
+(-6px);
 
-        
+	
 transform
 :
  
 translateY
-(0);
+(-6px);
 
-    
+
+}
+49
+.95
+ 
+%
+{
+-webkit-transform
+:
+ 
+translateY
+(4px);
+
+	
+transform
+:
+ 
+translateY
+(4px);
+
+
+}
+66
+.6
+ 
+%
+{
+-webkit-transform
+:
+ 
+translateY
+(-2px);
+
+	
+transform
+:
+ 
+translateY
+(-2px);
+
+
+}
+83
+.25
+ 
+%
+{
+-webkit-transform
+:
+ 
+translateY
+(1px);
+
+	
+transform
+:
+ 
+translateY
+(1px);
+
+
+}
+100%
+{
+-webkit-transform
+
+
+:
+
+ 
+
+translateY
+
+
+(0);
+transform
+
+
+:
+
+ 
+
+translateY
+
+
+(0);
 }
 }
 @
@@ -3419,45 +3611,109 @@ keyframes avatar { 16.65% {
 }
 
 33
-.3 % {
-	-webkit-transform: translateY(-6px);
-	transform: translateY(-6px);
-}
-
-49
-.95 % {
-	-webkit-transform: translateY(4px);
-	transform: translateY(4px);
-}
-
-66
-.6 % {
-	-webkit-transform: translateY(-2px);
-	transform: translateY(-2px);
-}
-
-83
-.25 % {
-	-webkit-transform: translateY(1px);
-	transform: translateY(1px);
-}
-
-100%
+.3
+ 
+%
 {
 -webkit-transform
 :
  
 translateY
-(0);
+(-6px);
 
-        
+	
 transform
 :
  
 translateY
-(0);
+(-6px);
 
-    
+
+}
+49
+.95
+ 
+%
+{
+-webkit-transform
+:
+ 
+translateY
+(4px);
+
+	
+transform
+:
+ 
+translateY
+(4px);
+
+
+}
+66
+.6
+ 
+%
+{
+-webkit-transform
+:
+ 
+translateY
+(-2px);
+
+	
+transform
+:
+ 
+translateY
+(-2px);
+
+
+}
+83
+.25
+ 
+%
+{
+-webkit-transform
+:
+ 
+translateY
+(1px);
+
+	
+transform
+:
+ 
+translateY
+(1px);
+
+
+}
+100%
+{
+-webkit-transform
+
+
+:
+
+ 
+
+translateY
+
+
+(0);
+transform
+
+
+:
+
+ 
+
+translateY
+
+
+(0);
 }
 }
 .comment-body {
@@ -5945,9 +6201,9 @@ li.search-inf {
 		min-height: 80px;
 		transition-duration: .5s;
 	}
-	.thumbnail .cat, .format-cat, .format-img-cat {
-		display: none;
-	}
+/* 	.thumbnail .cat, .format-cat, .format-img-cat { */
+/* 		display: none; */
+/* 	} */
 	.entry-meta {
 		display: inline;
 		left: 130px;
@@ -7409,7 +7665,8 @@ li.search-inf {
 body {
 	background-color: #F5F8F9;
 	display: flex;
-	min-height: 100vh; /*1vh鐞涖劎銇氬ù蹇氼潔閸ｃ劑鐝惔锔炬畱1%閿涳拷100vh娑撶儤绁荤憴鍫濇珤妤傛ê瀹抽敍灞惧妳鐟欏绻栨稉顏呭隘婵傜晫娈�*/
+	min-height: 100vh;
+	/*1vh鐞涖劎銇氬ù蹇氼潔閸ｃ劑鐝惔锔炬畱1%閿涳拷100vh娑撶儤绁荤憴鍫濇珤妤傛ê瀹抽敍灞惧妳鐟欏绻栨稉顏呭隘婵傜晫娈�*/
 	flex-direction: column; /*閻忓灚妞块惃鍕�嶉崹鍌滄纯閺勫墽銇�*/
 }
 

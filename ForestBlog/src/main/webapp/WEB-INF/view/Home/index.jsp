@@ -6,11 +6,9 @@
 <%@ taglib uri="/WEB-INF/myTag.tld" prefix="lyz" %>
 <%@ taglib prefix="rapid" uri="http://www.rapid-framework.org.cn/rapid" %>
 <!--------------------------------------------------------------------------->
-<!--------------------------------------------------------------------------->
 <!--　　　　　　　　　　　　　　　未来不迎，过往不恋　　　　　　　　　　　　　　　-->
 <!--------------------------------------------------------------------------->
 <!--　　　　　　　　　　　　　　　不忘初心，方得始终　　　　　　　　　　　　　　　-->
-<!--------------------------------------------------------------------------->
 <!----IT小青年--------------------------------------------------------------->
 <!--------幻凡ss------------------------------------------------------------->
 <!----------hfanss.com------------------------------------------------------->
@@ -207,39 +205,6 @@
         </div>
     </rapid:override>
     <%--左侧区域 end--%>
-    
-	<%--友情链接 start--%>
-    <rapid:override name="link">
-        <div class="links-box">
-            <div id="links">
-                <c:forEach items="${linkCustomList}" var="l">
-                    <ul class="lx7">
-                        <li class="link-f link-name">
-                            <a href="${l.linkUrl}" target="_blank"
-                            	<c:if test="${l.linkId%5==0}">
-                                		style="color: #FF83FA"
-                                </c:if>
-                                <c:if test="${l.linkId%5==1}">
-                                		style="color: #DC143C"
-                                </c:if>
-                                <c:if test="${l.linkId%5==2}">
-                                		style="color: #CAFF70"
-                                </c:if>
-                                <c:if test="${l.linkId%5==3}">
-                                		style="color: #BFEFFF"
-                                </c:if>
-                                <c:if test="${l.linkId%5==4}">
-                                		style="color: #9ACD32"
-                                </c:if>
-                               >${l.linkName}</a>
-                        </li>
-                    </ul>
-                </c:forEach>
-                <div class="clear"></div>
-            </div>
-        </div>
-    </rapid:override>
-    <%--友情链接 end--%>
     
     <%--侧边栏 start--%>
     <rapid:override name="right">

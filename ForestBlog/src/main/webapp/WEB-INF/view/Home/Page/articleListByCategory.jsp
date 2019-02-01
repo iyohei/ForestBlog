@@ -61,7 +61,7 @@
 
                                             <figure class="thumbnail">
                                                 <a href="/article/${a.articleCustom.articleId}">
-                                                    <img width="280" height="280"
+                                                    <img style="width:280; max-height: 135px;"
 					                                     src=" ${a.articleCustom.articleImg}"
 					                                     class="attachment-content size-content wp-post-image"
 					                                     alt="${a.articleCustom.articleTitle}">
@@ -103,7 +103,7 @@
 
 
                                 </span>
-                                                <span class="entry-meta">
+                                                <span class="entry-meta" style="left:auto;">
                                     <span class="date">
                                         <fmt:formatDate value="${a.articleCustom.articlePostTime}" pattern="yyyy年MM月dd日"/>
                                     &nbsp;&nbsp;

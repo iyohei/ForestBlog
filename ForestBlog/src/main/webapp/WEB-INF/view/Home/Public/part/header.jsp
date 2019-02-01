@@ -9,8 +9,10 @@ var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
   hm.src = "https://hm.baidu.com/hm.js?4e950a5dd7243ac97e882fe04d3fa1f7";
-  var s = document.getElementsByTagName("script")[0]; });
- </script>
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
 <%--导航 start--%>
 <header id="masthead" class="site-header" >
 
@@ -138,9 +140,9 @@ var _hmt = _hmt || [];
 
 <%--图片放大显示层  start--%>
 <div id="showImg" style="text-align:center;  display:none;  z-index:999;  width:100%;height: 100%;background-color: rgb(77, 77, 77,0.8);position: fixed; top: 0px;left: 0px;right: 0px; bottom: 0px;margin: auto;">
-	<div style="width: 70%;height:70%;text-align: center;position: fixed;top: 0px;left: 0px;right: 0px;bottom: 50px;margin: auto;">
+	<div style="width: 60%;height:60%;text-align: center;position: fixed;top: 0px;left: 0px;right: 0px;bottom: 0px;margin: auto;">
 		<a href="javascript:void(0);">
-			<img id="showImg_img"  src="" alt="" style="">
+			<img id="showImg_img"  src="" style="max-width: 100%;max-height: 100%;">
 		</a>
 	</div>
 

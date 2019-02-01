@@ -44,7 +44,7 @@ public class IndexController {
 		ModelAndView modelAndView = new ModelAndView();
 		//文章列表
 		int pageSize = 10;
-		List<ArticleListVo> articleListVoList = articleService.listArticleByPage(1,null,pageSize);
+		List<ArticleListVo> articleListVoList = articleService.listArticleByPage2(1,null,pageSize);
 		modelAndView.addObject("articleListVoList",articleListVoList);
 
 		modelAndView.setViewName("/Home/index");
@@ -58,7 +58,7 @@ public class IndexController {
 		ModelAndView modelAndView = new ModelAndView();
 		//设置每页显示的数量
 		int pageSize = 10;
-		List<ArticleListVo> articleListVoList = articleService.listArticleByPage(1,pageNow,pageSize);
+		List<ArticleListVo> articleListVoList = articleService.listArticleByPage2(1,pageNow,pageSize);
 		modelAndView.addObject("articleListVoList",articleListVoList);
 		modelAndView.setViewName("Home/index");
 		return modelAndView;//不会被解析为跳转路径，而是直接写入HTTP response body中

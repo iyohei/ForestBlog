@@ -15,7 +15,7 @@ import java.util.List;
 public interface ArticleMapperCustom {
 	//获取文章总数
 	public Integer countArticle(@Param(value="status") Integer status) throws Exception;
-	
+	public int countArticle2(@Param(value="status") Integer status) throws Exception;
 	//获得留言总数
 	public Integer countArticleComment(@Param(value="status")Integer status) throws Exception;
 	
@@ -30,7 +30,7 @@ public interface ArticleMapperCustom {
 	
 	//分页操作
 	public List<ArticleCustom> listArticleByPage(@Param(value="status") Integer status,@Param(value="startPos") Integer startPos, @Param(value="pageSize") Integer pageSize) throws Exception;
-	
+	public List<ArticleCustom> listArticleByPage2(@Param(value="status") Integer status,@Param(value="startPos") Integer startPos, @Param(value="pageSize") Integer pageSize) throws Exception;
 	//文章结果查询结果的数量
 	public Integer getSearchResultCount(@Param(value="status") Integer status,@Param(value="query")String query) throws Exception;
 	
@@ -71,6 +71,7 @@ public interface ArticleMapperCustom {
 
 	//获得最后更新的记录
 	public ArticleCustom getLastUpdateArticle() throws Exception;
+
 }
 
 
